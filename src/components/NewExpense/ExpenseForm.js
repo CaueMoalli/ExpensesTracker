@@ -6,39 +6,45 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-
   // const [userInput, setUserInput] = useState({
-  //   enteredTitle: "",
-  //   enteredAmount: "",
-  //   enteredDate: "",
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: '',
   // });
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-    // setUserInput((previousState) => {
-    //   return { ...previousState, enteredTitle: event.target.value };
+    // setUserInput({
+    //   ...userInput,
+    //   enteredTitle: event.target.value,
+    // });
+    // setUserInput((prevState) => {
+    //   return { ...prevState, enteredTitle: event.target.value };
     // });
   };
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-    // setUserInput((previousState) => {
-    //   return { ...previousState, enteredAmount: event.target.value };
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value,
     // });
   };
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-    // setUserInput((previousState) => {
-    //   return { ...previousState, enteredDate: event.target.value };
+    // setUserInput({
+    //   ...userInput,
+    //   enteredDate: event.target.value,
     // });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
+
     const expenseData = {
       title: enteredTitle,
-      amout: enteredAmount,
+      amount: enteredAmount,
       date: new Date(enteredDate),
     };
 
