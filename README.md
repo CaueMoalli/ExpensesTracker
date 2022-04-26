@@ -8,7 +8,7 @@ First, download or clone the repository. Then, open a terminal/cmd prompt in the
 
 This will download and install all project dependencies. After that, enter this command:
 
-`npm install`
+`npm start`
 
 This will start a local instance of the React project at `http://localhost:3000/`
 
